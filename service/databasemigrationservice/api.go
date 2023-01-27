@@ -9225,8 +9225,8 @@ type CreateReplicationTaskInput struct {
 	// CdcStartTime or CdcStartPosition to specify when you want a CDC operation
 	// to start. Specifying both values results in an error.
 	//
-	// Timestamp Example: --cdc-start-time “2018-03-08T12:12:12”
-	CdcStartTime *time.Time `type:"timestamp"`
+	// Value must be RFC3339 compliant. Example: --cdc-start-time “2018-03-08T12:12:12”
+	CdcStartTime *string `type:"string"`
 
 	// Indicates when you want a change data capture (CDC) operation to stop. The
 	// value can be either server time or commit time.
@@ -9355,7 +9355,7 @@ func (s *CreateReplicationTaskInput) SetCdcStartPosition(v string) *CreateReplic
 }
 
 // SetCdcStartTime sets the CdcStartTime field's value.
-func (s *CreateReplicationTaskInput) SetCdcStartTime(v time.Time) *CreateReplicationTaskInput {
+func (s *CreateReplicationTaskInput) SetCdcStartTime(v string) *CreateReplicationTaskInput {
 	s.CdcStartTime = &v
 	return s
 }
@@ -17767,8 +17767,8 @@ type ModifyReplicationTaskInput struct {
 	// CdcStartTime or CdcStartPosition to specify when you want a CDC operation
 	// to start. Specifying both values results in an error.
 	//
-	// Timestamp Example: --cdc-start-time “2018-03-08T12:12:12”
-	CdcStartTime *time.Time `type:"timestamp"`
+	// Value must be RFC3339 compliant. Example: --cdc-start-time “2018-03-08T12:12:12”
+	CdcStartTime *string `type:"string"`
 
 	// Indicates when you want a change data capture (CDC) operation to stop. The
 	// value can be either server time or commit time.
@@ -17852,7 +17852,7 @@ func (s *ModifyReplicationTaskInput) SetCdcStartPosition(v string) *ModifyReplic
 }
 
 // SetCdcStartTime sets the CdcStartTime field's value.
-func (s *ModifyReplicationTaskInput) SetCdcStartTime(v time.Time) *ModifyReplicationTaskInput {
+func (s *ModifyReplicationTaskInput) SetCdcStartTime(v string) *ModifyReplicationTaskInput {
 	s.CdcStartTime = &v
 	return s
 }
@@ -23722,8 +23722,8 @@ type StartReplicationTaskInput struct {
 	// CdcStartTime or CdcStartPosition to specify when you want a CDC operation
 	// to start. Specifying both values results in an error.
 	//
-	// Timestamp Example: --cdc-start-time “2018-03-08T12:12:12”
-	CdcStartTime *time.Time `type:"timestamp"`
+	// Value must be RFC3339 compliant. Example: --cdc-start-time “2018-03-08T12:12:12”
+	CdcStartTime *string `type:"string"`
 
 	// Indicates when you want a change data capture (CDC) operation to stop. The
 	// value can be either server time or commit time.
@@ -23794,7 +23794,7 @@ func (s *StartReplicationTaskInput) SetCdcStartPosition(v string) *StartReplicat
 }
 
 // SetCdcStartTime sets the CdcStartTime field's value.
-func (s *StartReplicationTaskInput) SetCdcStartTime(v time.Time) *StartReplicationTaskInput {
+func (s *StartReplicationTaskInput) SetCdcStartTime(v string) *StartReplicationTaskInput {
 	s.CdcStartTime = &v
 	return s
 }
